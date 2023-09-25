@@ -116,10 +116,6 @@ header article {
   text-transform: uppercase;
 }
 
-nav {
-  margin-bottom: 200px;
-}
-
 nav ul {
   display: flex;
   justify-content: center;
@@ -150,4 +146,71 @@ nav ul li a.active {
 img {
   width: 100px;
   height: 100px;
+}
+
+/* Grid Container */
+
+.main-top {
+  background-color: #a9a19e;
+  grid-column: span 6 / auto;
+  height: 38.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.main-top article {
+  padding: 6.44rem 6.69rem;
+  display: flex;
+}
+
+.main-top p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  /* height: 14.813rem;
+  width: 17.5rem; */
+}
+
+.main-top h2 {
+  font-size: 2.813rem;
+  font-weight: 900;
+  line-height: 2.813rem;
+  color: white;
+  /* width: 19.625rem;
+  height: 8.75rem; */
+}
+
+.main-top article:first-child {
+  padding-right: 2rem;
+}
+
+/* Grid container 2 */
+
+.card-container {
+  grid-column: span 6 / auto;
+  grid-template-columns: repeat(2, 1fr);
+  background: rgb(169, 161, 158);
+  background: linear-gradient(
+    180deg,
+    rgba(169, 161, 158, 1) 0%,
+    rgba(169, 161, 158, 1) 50%,
+    rgba(250, 177, 49, 1) 50%,
+    rgba(250, 177, 49, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 16rem;
+  height: 19.25rem;
+}
+
+.card p {
+  font-size: 0.688rem;
+  font-weight: 700;
+  line-height: 1.125;
+  color: rgba(0, 0, 0, 0.4);
 }
