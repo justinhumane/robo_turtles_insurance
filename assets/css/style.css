@@ -1,36 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600;700&family=Frank+Ruhl+Libre:wght@700;900&display=swap");
 
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* General styling */
 body {
-  background: #e5e5e5;
+  background: #ebebeb;
   max-width: 62.5rem;
   margin: 0 auto;
   font-family: "Fira Sans", sans-serif;
 }
 
+.join-now {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  border: 0;
+  width: 8.1875rem;
+  height: 2.4375rem;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6.25rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Typography */
 h1,
 h2,
 h3 {
   font-family: "Frank Ruhl Libre", serif;
 }
 
+/* Grid container */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
 
+/* Header / General */
 header {
   height: 34rem;
-}
-
-header img {
-  width: 17.875rem;
-  height: 17.438rem;
 }
 
 header article,
@@ -51,12 +65,12 @@ header article {
   font-weight: 700;
 }
 
+/* Header / Left */
 .header-left {
   background: #c7ddea url("../img/family.png") no-repeat right 1.06rem bottom;
   background-size: 17.875rem 17.438rem;
   font-size: 0.875rem;
   font-weight: 600;
-  overflow: visible;
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.5rem;
   padding: 4.44rem 6.56rem;
@@ -79,6 +93,11 @@ header article {
   margin-bottom: 1rem;
 }
 
+.header-left button {
+  margin-top: 3.19rem;
+}
+
+/* Header / Right */
 .header-top-right,
 .header-bottom-right {
   align-items: center;
@@ -101,21 +120,7 @@ header article {
   background: #ffb939;
 }
 
-.join-now {
-  background: #fff;
-  color: rgba(0, 0, 0, 0.8);
-  margin-top: 3.19rem;
-  border: 0;
-  width: 8.1875rem;
-  height: 2.4375rem;
-  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 6.25rem;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 0.625rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
+/* Navigation bar */
 nav ul {
   display: flex;
   justify-content: center;
@@ -143,28 +148,20 @@ nav ul li a.active {
   opacity: 1;
 }
 
-/* Grid Container */
-
+/* Main top */
 .main-top {
   background-color: #a9a19e;
   grid-column: span 6 / auto;
-  /* height: 38.25rem; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .main-top article {
-  padding: 6.44rem 6.69rem 6.44rem 6.69rem;
-  display: flex;
+  padding: 6.44rem 6.69rem;
 }
 
-.main-top p {
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  color: rgba(0, 0, 0, 0.6);
-  /* height: 14.813rem;
-  width: 17.5rem; */
+.main-top article:first-child {
+  padding-right: 2rem;
 }
 
 .main-top h2 {
@@ -172,19 +169,22 @@ nav ul li a.active {
   font-weight: 900;
   line-height: 2.813rem;
   color: white;
-  /* width: 19.625rem;
-  height: 8.75rem; */
 }
 
-.main-top article:first-child {
-  padding-right: 2rem;
+.main-top p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-/* Grid container 2 */
+.main-top button {
+  margin-top: 3.63rem;
+}
 
+/* Main cards */
 .card-container {
   grid-column: span 6 / auto;
-  grid-template-columns: repeat(2, 1fr);
   background: rgb(169, 161, 158);
   background: linear-gradient(
     180deg,
@@ -194,7 +194,6 @@ nav ul li a.active {
     rgba(250, 177, 49, 1) 100%
   );
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 1.69rem;
 }
@@ -203,42 +202,49 @@ nav ul li a.active {
   width: 16rem;
   height: 19.25rem;
   background-color: white;
-  width: 16rem;
-  height: 19.25rem;
   border-radius: 0.313rem;
   padding: 0.62rem;
   text-align: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 0 0.69rem;
+}
+
+.card h3 {
+  margin-bottom: 0.813rem;
 }
 
 .card p {
   font-size: 0.688rem;
   font-weight: 700;
-  line-height: 1.125;
+  line-height: 1.125rem;
   color: rgba(0, 0, 0, 0.4);
+}
+
+/* Main cards / Images */
+.image-child,
+.image-adult,
+.image-old {
+  border-radius: 0.25rem;
+  height: 9.375rem;
+  width: 14.75rem;
+  overflow: hidden;
+  margin-top: -2.245rem;
+  margin-bottom: 1.438rem;
 }
 
 .image-child {
   background-color: #c7ddea;
-  border-radius: 0.25rem;
-  height: 9.375rem;
-  width: 14.75rem;
-  overflow: hidden;
 }
 
 .image-adult {
   background-color: #fab131;
-  border-radius: 0.25rem;
-  height: 9.375rem;
-  width: 14.75rem;
-  overflow: hidden;
 }
 
 .image-old {
   background-color: #f17949;
-  border-radius: 0.25rem;
-  height: 9.375rem;
-  width: 14.75rem;
-  overflow: hidden;
 }
 
 .image-child img {
@@ -256,13 +262,11 @@ nav ul li a.active {
   margin-top: 1.5rem;
 }
 
-/* Grid container 3 */
-
+/* Main bottom */
 .main-bottom {
   background-color: #fab131;
   display: flex;
   flex-direction: column;
-  align-items: center;
   grid-column: span 6 / auto;
   padding: 4.125rem 17.5rem;
   text-align: center;
@@ -288,30 +292,19 @@ nav ul li a.active {
   margin-bottom: 5rem;
 }
 
+/* Box section */
+.boxes {
+  grid-column: span 6 / auto;
+  background-color: white;
+}
+
 .boxes section {
   grid-column: span 2 / auto;
   display: flex;
   height: 21.25rem;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 0 2.5rem; */
-}
-
-.boxes h3 {
-  font-size: 2.188rem;
-  font-weight: 900;
-  line-height: 2.188rem;
-  color: rgba(0, 0, 0, 0.4);
-  justify-self: start;
   position: relative;
-  top: -7rem;
-  left: -6rem;
-}
-
-.boxes {
-  grid-column: span 6 / auto;
-  background-color: white;
 }
 
 .boxes section:first-child {
@@ -331,6 +324,16 @@ nav ul li a.active {
   text-align: center;
 }
 
+.boxes h3 {
+  font-size: 2.188rem;
+  font-weight: 900;
+  line-height: 2.188rem;
+  color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
 .boxes p {
   text-align: center;
   font-size: 1.063rem;
@@ -340,21 +343,25 @@ nav ul li a.active {
 }
 
 /* Footer */
-
 footer {
   grid-column: span 6 / auto;
   background-color: #777574;
   height: 24rem;
-  margin-bottom: 1rem;
 }
 
 footer section {
   flex-direction: column;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   background-color: #a9a19e;
   height: 4.25rem;
+  position: relative;
+}
+
+footer section img {
+  position: absolute;
+  top: 0.19rem;
 }
 
 footer section p {
